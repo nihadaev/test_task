@@ -8,7 +8,7 @@ import imagemin from 'gulp-imagemin';
 
 // Минификация JavaScript
 gulp.task('scripts', () => {
-    return gulp.src(['src/assets/js/*.js', 'src/assets/js/helpers/*.js', 'src/assets/js/services/*.js'])  // Укажи пути к своим JS файлам
+    return gulp.src(['src/assets/js/*.js', 'src/assets/js/helpers/*.js', 'src/assets/js/services/*.js']) 
         .pipe(terser())
         .pipe(rename({ extname: '.min.js' }))
         .pipe(gulp.dest(file => {
@@ -19,7 +19,7 @@ gulp.task('scripts', () => {
             if (file.dirname.includes('services')) {
                 return 'dist/assets/js/services';
             }
-            return 'dist/assets/js';  // Если папка не matches, сохраняем в dist/js
+            return 'dist/assets/js';  // Если папка не выполняет условия, сохраняем в dist/js
         }));
 });
 
@@ -60,4 +60,4 @@ gulp.task('update-html-imports', () => {
 });
 
 // Автоматическое выполнение всех задач
-gulp.task('default', gulp.series('scripts', 'update-imports', 'styles', 'images', 'minify-html', 'update-html-imports'));  // Выполняем задачи по порядку
+gulp.task('default', gulp.series('scripts', 'update-imports', 'styles', 'images', 'minify-html', 'update-html-imports')); 

@@ -9,4 +9,4 @@ signUpBtn.addEventListener('click', () => togglePopup(true, signUpPopup));
 
 
 // Автоматическая проверка и редирект при загрузке страницы
-// redirectIfAuthenticated();
+redirectIfAuthenticated();
