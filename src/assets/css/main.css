@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 /* Общие стили */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     list-style: none;
+    font-family: "Open Sans", sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color: #f8f8f8;
 }
 
@@ -126,17 +127,13 @@ body {
 
 .heart img {
     width: clamp(72px, 100%, 180px);
-    /* Динамический размер */
     height: clamp(71px, 100%, 178px);
-    /* width: 100%; */
-    /* height: 100%; */
 }
 
 
 .text-section h2 {
     color: #d1005a;
     font-size: clamp(35px, 4vw, 77px);
-    /* font-size: 77px; */
     margin-bottom: 10px;
 }
 
@@ -298,7 +295,6 @@ li {
     .container {
         flex-direction: column;
         align-items: start;
-        /* justify-content: space-between; */
         gap: 50px;
         text-align: left;
     }
@@ -351,7 +347,6 @@ li {
     .container {
         flex-direction: column;
         align-items: start;
-        /* justify-content: space-between; */
         gap: 50px;
         text-align: left;
     }
